@@ -1,0 +1,645 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Professional content creation services from The Sure Win Agency. Get custom photos and videos that reflect your brand and save hours of content scrambling.">
+    <title>Content Creation Services - The Sure Win Agency</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="../js/navigation.js"></script>
+    <style>
+        /* FAQ Section Styles */
+        .faq-section {
+            padding: 4rem 0;
+        }
+
+        .faq-item {
+            margin-bottom: 1rem;
+        }
+
+        .faq-question {
+            cursor: pointer;
+            padding: 1rem;
+            background: var(--light-gray);
+            border-radius: 4px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .faq-answer {
+            padding: 1rem;
+            display: none;
+        }
+
+        .faq-answer.active {
+            display: block;
+        }
+
+        /* Service Cards */
+        .service-card {
+            background: var(--white);
+            border-radius: 8px;
+            padding: 2rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+        }
+
+        /* Pricing Cards */
+        .pricing-card {
+            background: var(--white);
+            border-radius: 8px;
+            padding: 2rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .pricing-card.featured {
+            border: 2px solid var(--primary-color);
+            transform: scale(1.05);
+        }
+
+        /* Card Styles */
+        .service-card {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            padding: 30px;
+            margin-bottom: 30px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+        }
+        
+        .service-card h3 {
+            margin-top: 0;
+            margin-bottom: 15px;
+            color: var(--primary-color);
+        }
+        
+        .service-card p {
+            margin-bottom: 20px;
+            color: #666;
+            line-height: 1.6;
+        }
+        
+        .service-card ul {
+            margin-bottom: 20px;
+            padding-left: 20px;
+        }
+        
+        .service-card li {
+            margin-bottom: 8px;
+            color: #555;
+        }
+        
+        .service-card .cta-button {
+            display: inline-block;
+            margin-top: 10px;
+        }
+        
+        .service-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .benefit-card {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            padding: 25px;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .benefit-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+        }
+        
+        .benefit-icon {
+            width: 60px;
+            height: 60px;
+            background-color: var(--primary-color);
+            color: #fff;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            font-size: 24px;
+        }
+        
+        .benefit-card h4 {
+            margin-top: 0;
+            margin-bottom: 15px;
+            color: var(--primary-color);
+        }
+        
+        .benefit-card p {
+            margin-bottom: 0;
+            color: #666;
+            line-height: 1.6;
+        }
+        
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="../index.html" class="logo">
+                <img src="../images/logo.png" alt="The Sure Win Agency Logo" style="height: 40px;">
+            </a>
+            <div class="nav-links">
+                <a href="../index.html">Home</a>
+                <a href="../about.html">About</a>
+                <a href="../services.html">What We Do</a>
+                <a href="../resources.html">Resources</a>
+                <a href="../faq.html">FAQ</a>
+                <a href="../contact.html" class="cta-button">Get In Touch</a>
+            </div>
+            <button class="mobile-menu-btn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Service Hero Section -->
+    <section class="services-hero">
+        <div class="container">
+            <h1>Professional Content Creation</h1>
+            <p class="hero-subtitle">Custom photos and videos that reflect your brand and save you hours of content scrambling</p>
+            <div class="hero-cta">
+                <a href="../contact.html" class="cta-button">Book Your Free Discovery Call</a>
+                <a href="../services/quiz.html" class="cta-button secondary">Take Our Marketing Quiz</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Problem Section -->
+    <section class="problem-section">
+        <div class="container">
+            <div class="service-card">
+                <h2>The Content Creation Challenge</h2>
+                <p>Many business owners struggle with content creation because they:</p>
+                <ul class="problem-list">
+                    <li><strong>Spend hours</strong> trying to create professional-looking content</li>
+                    <li><strong>Lack the skills</strong> to showcase their products or services effectively</li>
+                    <li><strong>Struggle to maintain</strong> a consistent brand aesthetic across all content</li>
+                    <li><strong>Find themselves scrambling</strong> for content at the last minute</li>
+                    <li><strong>Miss opportunities</strong> to engage their audience with high-quality visuals</li>
+                </ul>
+                <p>These challenges can lead to inconsistent branding, wasted time, and missed opportunities to connect with your audience.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Solution Section -->
+    <section class="solution-section">
+        <div class="container">
+            <div class="service-card">
+                <h2>Our Content Creation Solution</h2>
+                <p>We help you create professional-grade content that:</p>
+                <ul class="solution-list">
+                    <li><strong>Showcases your brand</strong> in the best possible light</li>
+                    <li><strong>Engages your audience</strong> with visually stunning photos and videos</li>
+                    <li><strong>Maintains consistency</strong> across all platforms</li>
+                    <li><strong>Saves you hours</strong> of content creation time</li>
+                    <li><strong>Helps you stand out</strong> in a crowded marketplace</li>
+                </ul>
+                <p>Our content creation service is designed for business owners who want to manage their own social media but need professional-grade content to make it work.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features-benefits">
+        <div class="container">
+            <h2>What's Included in Our Content Creation Services</h2>
+            <p class="section-intro">Our content creation service includes the creation of professional visuals for your marketing - captured, edited, and delivered ready to post.</p>
+            
+            <div class="service-grid">
+                <div class="service-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-camera"></i>
+                    </div>
+                    <h3>Professional Photography</h3>
+                    <ul class="feature-list">
+                        <li>Product photography</li>
+                        <li>Lifestyle and brand shots</li>
+                        <li>Team and behind-the-scenes content</li>
+                        <li>Event coverage</li>
+                        <li>High-resolution images optimized for all platforms</li>
+                    </ul>
+                </div>
+                
+                <div class="service-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-video"></i>
+                    </div>
+                    <h3>Video Production</h3>
+                    <ul class="feature-list">
+                        <li>Short-form videos for social media</li>
+                        <li>Product demonstrations</li>
+                        <li>Customer testimonials</li>
+                        <li>Brand story videos</li>
+                        <li>Vertical and horizontal formats</li>
+                    </ul>
+                </div>
+                
+                <div class="service-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-paint-brush"></i>
+                    </div>
+                    <h3>Professional Editing</h3>
+                    <ul class="feature-list">
+                        <li>Color correction and enhancement</li>
+                        <li>Background removal and replacement</li>
+                        <li>Text and graphic overlays</li>
+                        <li>Video trimming and transitions</li>
+                        <li>Brand-consistent filters and effects</li>
+                    </ul>
+                </div>
+                
+                <div class="service-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-folder-open"></i>
+                    </div>
+                    <h3>Organized Delivery</h3>
+                    <ul class="feature-list">
+                        <li>Cloud-based delivery system</li>
+                        <li>Organized by campaign or content type</li>
+                        <li>Multiple format options</li>
+                        <li>Usage rights documentation</li>
+                        <li>Quick turnaround times</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="benefits-section">
+                <h3>Why Choose Our Content Creation Services</h3>
+                <div class="benefits-grid">
+                    <div class="benefit-card">
+                        <div class="benefit-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <h4>Time-Saving</h4>
+                        <p>We handle all aspects of content creation, freeing up your time to focus on running your business.</p>
+                    </div>
+                    
+                    <div class="benefit-card">
+                        <div class="benefit-icon">
+                            <i class="fas fa-palette"></i>
+                        </div>
+                        <h4>Consistent Branding</h4>
+                        <p>All content maintains your brand identity and aesthetic across all platforms.</p>
+                    </div>
+                    
+                    <div class="benefit-card">
+                        <div class="benefit-icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <h4>Increased Engagement</h4>
+                        <p>Professional content drives higher engagement rates and helps you connect with your audience.</p>
+                    </div>
+                    
+                    <div class="benefit-card">
+                        <div class="benefit-icon">
+                            <i class="fas fa-rocket"></i>
+                        </div>
+                        <h4>Scalable Solution</h4>
+                        <p>Our flexible packages grow with your business, from one-off shoots to monthly content creation.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="pricing-section">
+        <div class="container">
+            <h2>Flexible Content Creation Packages</h2>
+            <p class="section-intro">Choose the package that best fits your content needs and budget.</p>
+            
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <h3>One-Off Shoot</h3>
+                    <p class="price">£595 per shoot</p>
+                    <p class="pricing-description">Perfect for a single refresh or seasonal update</p>
+                    <ul class="pricing-features">
+                        <li>Pre-Shoot Planning Session (30–45 min)</li>
+                        <li>On-Location Shoot (2.5–3 hours)</li>
+                        <li>Editing & Delivery</li>
+                        <li>10 edited photos and 2 short videos</li>
+                    </ul>
+                    <a href="../contact.html" class="cta-button"><span>Book Now</span></a>
+                </div>
+                
+                <div class="pricing-card featured">
+                    <div class="featured-tag">Most Popular</div>
+                    <h3>Monthly Shoots</h3>
+                    <p class="price">£495 per shoot</p>
+                    <p class="pricing-description">Best option for content-rich brands wanting consistency and volume all year round</p>
+                    <ul class="pricing-features">
+                        <li>Pre-Shoot Planning Session (30–45 min)</li>
+                        <li>On-Location Shoot (2.5–3 hours)</li>
+                        <li>Editing & Delivery</li>
+                        <li>15 edited photos and 3 short videos</li>
+                        <li>Priority scheduling</li>
+                    </ul>
+                    <a href="../contact.html" class="cta-button"><span>Book Now</span></a>
+                </div>
+                
+                <div class="pricing-card">
+                    <h3>Bi-Monthly Shoots</h3>
+                    <p class="price">£525 per shoot</p>
+                    <p class="pricing-description">Perfect for businesses active on multiple platforms needing a steady flow of fresh content</p>
+                    <ul class="pricing-features">
+                        <li>Pre-Shoot Planning Session (30–45 min)</li>
+                        <li>On-Location Shoot (2.5–3 hours)</li>
+                        <li>Editing & Delivery</li>
+                        <li>12 edited photos and 2 short videos</li>
+                    </ul>
+                    <a href="../contact.html" class="cta-button"><span>Book Now</span></a>
+                </div>
+                
+                <div class="pricing-card">
+                    <h3>Quarterly Shoots</h3>
+                    <p class="price">£550 per shoot</p>
+                    <p class="pricing-description">Ideal for seasonal campaigns or regular content top-ups</p>
+                    <ul class="pricing-features">
+                        <li>Pre-Shoot Planning Session (30–45 min)</li>
+                        <li>On-Location Shoot (2.5–3 hours)</li>
+                        <li>Editing & Delivery</li>
+                        <li>10 edited photos and 2 short videos</li>
+                    </ul>
+                    <a href="../contact.html" class="cta-button"><span>Book Now</span></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Add-Ons Section -->
+    <section class="add-ons-section">
+        <div class="container">
+            <h2>Optional Add-Ons</h2>
+            <p class="section-intro">Enhance your content creation package with these additional services:</p>
+            
+            <div class="service-grid">
+                <div class="service-card">
+                    <div class="add-on-icon">
+                        <i class="fas fa-pencil-alt"></i>
+                    </div>
+                    <h3>Caption Copywriting</h3>
+                    <p>Engaging captions for your social media posts</p>
+                </div>
+                
+                <div class="service-card">
+                    <div class="add-on-icon">
+                        <i class="fas fa-calendar-alt"></i>
+                    </div>
+                    <h3>Content Calendar Creation</h3>
+                    <p>Strategic planning for your content distribution</p>
+                </div>
+                
+                <div class="service-card">
+                    <div class="add-on-icon">
+                        <i class="fas fa-chart-bar"></i>
+                    </div>
+                    <h3>Insights & Analytics Breakdown</h3>
+                    <p>Performance analysis of your content</p>
+                </div>
+                
+                <div class="service-card">
+                    <div class="add-on-icon">
+                        <i class="fas fa-palette"></i>
+                    </div>
+                    <h3>Branded Story Templates</h3>
+                    <p>Custom templates for your Instagram Stories</p>
+                </div>
+                
+                <div class="service-card">
+                    <div class="add-on-icon">
+                        <i class="fas fa-microphone"></i>
+                    </div>
+                    <h3>Voiceover Script + Subtitles</h3>
+                    <p>Professional voiceovers and captions for your videos</p>
+                </div>
+                
+                <div class="service-card">
+                    <div class="add-on-icon">
+                        <i class="fas fa-lightbulb"></i>
+                    </div>
+                    <h3>Strategy Sessions</h3>
+                    <p>One-on-one strategy planning for your content</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trust Reinforcement Section -->
+    <section class="social-proof">
+        <div class="container">
+            <h2>What Our Clients Say</h2>
+            
+            <div class="testimonials">
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <p>"The Sure Win Agency's content creation service has transformed our social media presence. The professional photos and videos they create for us have increased our engagement by 40% and helped us attract new customers. Their monthly shoot package gives us exactly what we need to maintain a consistent brand presence."</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-image">
+                            <img src="../images/testimonial-7.jpg" alt="Jessica Martinez">
+                        </div>
+                        <div class="author-info">
+                            <h4>Jessica Martinez</h4>
+                            <p>Owner, Boutique Fashion Brand</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <p>"As a restaurant owner, I was struggling to create appetizing food photography that would attract customers. The Sure Win Agency's content creation team has been a game-changer. Their professional photos have increased our Instagram following by 60% and our online orders have doubled. The quarterly shoots are perfect for our seasonal menu changes."</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-image">
+                            <img src="../images/testimonial-8.jpg" alt="David Wilson">
+                        </div>
+                        <div class="author-info">
+                            <h4>David Wilson</h4>
+                            <p>Owner, Gourmet Bistro</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="client-logos">
+                <h3>Trusted by Industry Leaders</h3>
+                <div class="logo-grid">
+                    <img src="../images/client-logo-1.png" alt="Client Logo 1">
+                    <img src="../images/client-logo-2.png" alt="Client Logo 2">
+                    <img src="../images/client-logo-3.png" alt="Client Logo 3">
+                    <img src="../images/client-logo-4.png" alt="Client Logo 4">
+                    <img src="../images/client-logo-5.png" alt="Client Logo 5">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQs Section -->
+    <section class="faq-section">
+        <div class="container">
+            <h2>Frequently Asked Questions</h2>
+            <p class="section-intro">Get answers to common questions about our content creation services.</p>
+            
+            <div class="faq-container">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>How long does a typical content shoot take?</h3>
+                        <span class="faq-toggle"><i class="fas fa-chevron-down"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>A standard content shoot takes 2.5-3 hours on location. This includes setup time, capturing a variety of shots, and ensuring we have all the content you need. For more complex shoots or those requiring multiple locations, we may recommend a longer session.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>How many photos and videos do I get from each shoot?</h3>
+                        <span class="faq-toggle"><i class="fas fa-chevron-down"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>The number of deliverables varies by package. Our monthly package includes 15 edited photos and 3 short videos, while our one-off and quarterly packages include 10 edited photos and 2 short videos. We can customize these numbers based on your specific needs.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Do I need to provide props or styling for the shoot?</h3>
+                        <span class="faq-toggle"><i class="fas fa-chevron-down"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>We'll discuss all requirements during the pre-shoot planning session. In most cases, we'll use your existing products, props, and styling. For specialized shoots, we may recommend additional props or styling elements to enhance the final results.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>How long does it take to receive the edited content?</h3>
+                        <span class="faq-toggle"><i class="fas fa-chevron-down"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>We typically deliver edited content within 5-7 business days after the shoot. For clients on our monthly package, we prioritize their content to ensure consistent posting schedules. Rush delivery is available for an additional fee if needed.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Can you help with content strategy beyond just creation?</h3>
+                        <span class="faq-toggle"><i class="fas fa-chevron-down"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Absolutely! We offer add-on services including content calendar creation, strategy sessions, and analytics breakdown. These services help ensure your content aligns with your marketing goals and performs well on your chosen platforms.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Do you offer video editing services separately?</h3>
+                        <span class="faq-toggle"><i class="fas fa-chevron-down"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes, we can provide video editing services for content you've already captured. This is perfect for businesses that have their own in-house content creation but need professional editing to elevate their final product.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <h2>You're One Conversation Away from Winning Content</h2>
+            <p>Book a free discovery call today and let's discuss how our content creation services can help you achieve your marketing goals.</p>
+            <div class="cta-buttons">
+                <a href="../contact.html" class="cta-button"><span>Get Started</span></a>
+                <a href="../services/quiz.html" class="cta-button secondary">Take Our Marketing Quiz</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-info">
+                    <h3>The Sure Win Agency</h3>
+                    <p>We turn content into conversations.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <a href="../index.html">Home</a>
+                    <a href="../about.html">About</a>
+                    <a href="../services.html">Services</a>
+                    <a href="../contact.html">Contact</a>
+                </div>
+                <div class="footer-contact">
+                    <h4>Contact Us</h4>
+                    <p>Email: info@thesurewinagency.com</p>
+                    <p>Phone: (555) 123-4567</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 The Sure Win Agency. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+    <script>
+        // FAQ Accordion functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const faqItems = document.querySelectorAll('.faq-item');
+            
+            faqItems.forEach(item => {
+                const question = item.querySelector('.faq-question');
+                
+                question.addEventListener('click', () => {
+                    // Close all other items
+                    faqItems.forEach(otherItem => {
+                        if (otherItem !== item) {
+                            otherItem.classList.remove('active');
+                        }
+                    });
+                    
+                    // Toggle current item
+                    item.classList.toggle('active');
+                });
+            });
+        });
+    </script>
+</body>
+</html> 

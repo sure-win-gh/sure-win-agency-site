@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - The Sure Win Agency</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="js/navigation.js"></script>
+</head>
+<body>
+    <!-- Navigation will be inserted by navigation.js -->
+
+    <!-- Contact Hero Section -->
+    <section class="contact-hero">
+        <div class="container">
+            <h1>Let's Create Your Winning Strategy</h1>
+            <p class="hero-subtitle">Take the first step towards transforming your business with our data-driven marketing solutions</p>
+        </div>
+    </section>
+
+    <!-- Multi-step Form Section -->
+    <section class="contact-form-section">
+        <div class="container">
+            <div class="form-container">
+                <div class="form-progress">
+                    <div class="progress-step active" data-step="1">
+                        <div class="step-number">1</div>
+                        <div class="step-label">Services</div>
+                    </div>
+                    <div class="progress-step" data-step="2">
+                        <div class="step-number">2</div>
+                        <div class="step-label">Readiness</div>
+                    </div>
+                    <div class="progress-step" data-step="3">
+                        <div class="step-number">3</div>
+                        <div class="step-label">Details</div>
+                    </div>
+                </div>
+
+                <form id="contact-form" class="multi-step-form">
+                    <!-- Step 1: Services -->
+                    <div class="form-step active" data-step="1">
+                        <h3>What services are you interested in?</h3>
+                        <div class="service-options">
+                            <label class="service-option">
+                                <input type="checkbox" name="services" value="content-creation">
+                                <span class="checkbox-custom"></span>
+                                <span class="service-label">Content Creation</span>
+                            </label>
+                            <label class="service-option">
+                                <input type="checkbox" name="services" value="social-media">
+                                <span class="checkbox-custom"></span>
+                                <span class="service-label">Social Media Management</span>
+                            </label>
+                            <label class="service-option">
+                                <input type="checkbox" name="services" value="facebook-ads">
+                                <span class="checkbox-custom"></span>
+                                <span class="service-label">Facebook Ads</span>
+                            </label>
+                            <label class="service-option">
+                                <input type="checkbox" name="services" value="email-marketing">
+                                <span class="checkbox-custom"></span>
+                                <span class="service-label">Email Marketing</span>
+                            </label>
+                            <label class="service-option">
+                                <input type="checkbox" name="services" value="marketing-automation">
+                                <span class="checkbox-custom"></span>
+                                <span class="service-label">Marketing Automation</span>
+                            </label>
+                        </div>
+                        <div class="form-buttons">
+                            <button type="button" class="next-step">Next <i class="fas fa-arrow-right"></i></button>
+                        </div>
+                    </div>
+
+                    <!-- Step 2: Readiness -->
+                    <div class="form-step" data-step="2">
+                        <h3>Are you ready to invest in a solution?</h3>
+                        <div class="readiness-options">
+                            <label class="readiness-option">
+                                <input type="radio" name="readiness" value="ready" required>
+                                <span class="radio-custom"></span>
+                                <span class="readiness-label">Yes, I'm ready to start now</span>
+                            </label>
+                            <label class="readiness-option">
+                                <input type="radio" name="readiness" value="planning">
+                                <span class="radio-custom"></span>
+                                <span class="readiness-label">I'm planning for the future</span>
+                            </label>
+                            <label class="readiness-option">
+                                <input type="radio" name="readiness" value="researching">
+                                <span class="radio-custom"></span>
+                                <span class="readiness-label">Just researching options</span>
+                            </label>
+                        </div>
+                        <div class="form-buttons">
+                            <button type="button" class="prev-step"><i class="fas fa-arrow-left"></i> Previous</button>
+                            <button type="button" class="next-step">Next <i class="fas fa-arrow-right"></i></button>
+                        </div>
+                    </div>
+
+                    <!-- Step 3: Contact Details -->
+                    <div class="form-step" data-step="3">
+                        <h3>Tell us about yourself</h3>
+                        <div class="form-fields">
+                            <div class="form-group">
+                                <label for="name">Full Name</label>
+                                <input type="text" id="name" name="name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="business">Business Name</label>
+                                <input type="text" id="business" name="business" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email Address</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Phone Number</label>
+                                <input type="tel" id="phone" name="phone" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="budget">Monthly Marketing Budget</label>
+                                <select id="budget" name="budget" required>
+                                    <option value="">Select a range</option>
+                                    <option value="1000-2500">$1,000 - $2,500</option>
+                                    <option value="2500-5000">$2,500 - $5,000</option>
+                                    <option value="5000-10000">$5,000 - $10,000</option>
+                                    <option value="10000+">$10,000+</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="message">Additional Information</label>
+                                <textarea id="message" name="message" rows="4" placeholder="Tell us about your goals and challenges"></textarea>
+                            </div>
+                        </div>
+                        <div class="form-buttons">
+                            <button type="button" class="prev-step"><i class="fas fa-arrow-left"></i> Previous</button>
+                            <button type="submit" class="submit-form">Submit <i class="fas fa-check"></i></button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+            <div class="contact-info">
+                <p>Prefer to reach out directly? Email us at <a href="mailto:hello@thesurewinagency.com">hello@thesurewinagency.com</a></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-info">
+                    <h3>The Sure Win Agency</h3>
+                    <p>We turn content into conversations.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <a href="index.html">Home</a>
+                    <a href="about.html">About</a>
+                    <a href="services.html">Services</a>
+                    <a href="contact.html">Contact</a>
+                </div>
+                <div class="footer-contact">
+                    <h4>Contact Us</h4>
+                    <p>Email: hello@thesurewinagency.com</p>
+                    <p>Phone: (555) 123-4567</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 The Sure Win Agency. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/contact-form.js"></script>
+</body>
+</html> 

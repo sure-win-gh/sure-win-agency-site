@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Sure Win Agency - Digital Marketing & Web Development</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="js/navigation.js"></script>
+</head>
+<body>
+    <!-- Floating CTA Wrapper -->
+    <div class="floating-cta-wrapper">
+        <div class="floating-cta">
+            <span class="cta-text">Ready to grow your business?</span>
+            <a href="contact.html" class="cta-button">
+                Book a Call
+                <i class="fas fa-calendar"></i>
+            </a>
+        </div>
+    </div>
+
+    <!-- Navigation will be inserted by navigation.js -->
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Struggling to grow your business online?</h1>
+            <h2>We turn digital challenges into winning strategies.</h2>
+            <p>Stop wasting time and money on marketing that doesn't work. Our proven approach delivers real results.</p>
+            <a href="contact.html" class="cta-button">
+                Get Your Free Strategy Call
+                <i class="fas fa-arrow-right"></i>
+            </a>
+        </div>
+    </section>
+
+    <!-- Problem Section -->
+    <section class="problem-section">
+        <div class="container">
+            <h2 class="animate-on-scroll">Making it big online is tougher than you think.</h2>
+            <div class="problem-grid">
+                <div class="problem-card animate-on-scroll" data-delay="0.1">
+                    <i class="fas fa-chart-line"></i>
+                    <h3>Low Website Traffic</h3>
+                    <p>Your website isn't getting the visitors it needs to grow your business.</p>
+                </div>
+                <div class="problem-card animate-on-scroll" data-delay="0.2">
+                    <i class="fas fa-ad"></i>
+                    <h3>Wasted Ad Spend</h3>
+                    <p>Your ads aren't converting, and you're burning through your budget.</p>
+                </div>
+                <div class="problem-card animate-on-scroll" data-delay="0.3">
+                    <i class="fas fa-users"></i>
+                    <h3>No Clear Strategy</h3>
+                    <p>You're trying everything but nothing seems to work consistently.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Solution Section -->
+    <section class="solution-section">
+        <div class="container">
+            <h2 class="animate-on-scroll">We're the digital growth team you've been looking for.</h2>
+            <div class="solution-grid">
+                <div class="solution-card animate-on-scroll" data-delay="0.1">
+                    <i class="fas fa-search"></i>
+                    <h3>SEO That Works</h3>
+                    <p>Get found by the right customers through strategic search optimization.</p>
+                </div>
+                <div class="solution-card animate-on-scroll" data-delay="0.2">
+                    <i class="fas fa-bullseye"></i>
+                    <h3>Targeted Advertising</h3>
+                    <p>Reach your ideal customers with precision through our PPC campaigns.</p>
+                </div>
+                <div class="solution-card animate-on-scroll" data-delay="0.3">
+                    <i class="fas fa-code"></i>
+                    <h3>High-Converting Websites</h3>
+                    <p>Turn visitors into customers with websites designed to convert.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Results Section -->
+    <section class="results-section">
+        <div class="container">
+            <h2 class="animate-on-scroll">Real Results, Real Growth</h2>
+            <div class="results-grid">
+                <div class="result-card animate-on-scroll" data-delay="0.1">
+                    <h3>300%</h3>
+                    <p>Average increase in website traffic</p>
+                </div>
+                <div class="result-card animate-on-scroll" data-delay="0.2">
+                    <h3>2.5x</h3>
+                    <p>Higher conversion rates</p>
+                </div>
+                <div class="result-card animate-on-scroll" data-delay="0.3">
+                    <h3>40%</h3>
+                    <p>Reduction in customer acquisition costs</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <h2 class="animate-on-scroll">Ready to transform your digital presence?</h2>
+            <p class="animate-on-scroll">Book your free strategy call today and discover how we can help you grow.</p>
+            <a href="contact.html" class="cta-button animate-on-scroll">
+                Schedule Your Call
+                <i class="fas fa-calendar"></i>
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-info">
+                    <h3>The Sure Win Agency</h3>
+                    <p>We turn content into conversations.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <a href="index.html">Home</a>
+                    <a href="about.html">About</a>
+                    <a href="services.html">Services</a>
+                    <a href="contact.html">Contact</a>
+                </div>
+                <div class="footer-contact">
+                    <h4>Contact Us</h4>
+                    <p>Email: info@thesurewinagency.com</p>
+                    <p>Phone: (555) 123-4567</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 The Sure Win Agency. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script>
+        // Scroll animation and floating CTA only
+        document.addEventListener('DOMContentLoaded', function() {
+            const animateElements = document.querySelectorAll('.animate-on-scroll');
+            const floatingCTA = document.querySelector('.floating-cta-wrapper');
+            let lastScrollTop = 0;
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const delay = entry.target.getAttribute('data-delay') || 0;
+                        setTimeout(() => {
+                            entry.target.classList.add('animate');
+                        }, delay * 1000);
+                    }
+                });
+            }, {
+                threshold: 0.1
+            });
+
+            animateElements.forEach(element => {
+                observer.observe(element);
+            });
+
+            // Scroll-based CTA visibility
+            window.addEventListener('scroll', function() {
+                const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+                
+                if (scrollTop > 300) { // Show CTA after scrolling 300px
+                    if (scrollTop > lastScrollTop) {
+                        // Scrolling down
+                        floatingCTA.classList.add('visible');
+                    } else {
+                        // Scrolling up
+                        floatingCTA.classList.remove('visible');
+                    }
+                } else {
+                    // Hide CTA when near top of page
+                    floatingCTA.classList.remove('visible');
+                }
+                
+                lastScrollTop = scrollTop;
+            });
+        });
+    </script>
+</body>
+</html> 
