@@ -10,14 +10,14 @@ class Navigation {
             const navigationHTML = `
                 <nav class="navbar">
                     <div class="nav-container">
-                        <a href="${basePath}index.html" class="logo">
+                        <a href="${basePath}" class="logo">
                             <img src="${basePath}images/logo.png" alt="The Sure Win Agency Logo" style="height: 40px; width: auto;">
                         </a>
                         <div class="nav-links">
-                            <a href="${basePath}services.html">What We Do</a>
-                            <a href="${basePath}resources.html">Resources</a>
-                            <a href="${basePath}faq.html">FAQ</a>
-                            <a href="${basePath}contact.html" class="cta-button">Get In Touch</a>
+                            <a href="${basePath}services">What We Do</a>
+                            <a href="${basePath}resources">Resources</a>
+                            <a href="${basePath}faq">FAQ</a>
+                            <a href="${basePath}contact" class="cta-button">Get In Touch</a>
                         </div>
                         <button class="mobile-menu-btn">
                             <span></span>
@@ -43,7 +43,7 @@ class Navigation {
             // Add event listener for logo
             document.querySelector('.logo').addEventListener('click', (e) => {
                 e.preventDefault();
-                window.location.href = `${basePath}index.html`;
+                window.location.href = `${basePath}`;
             });
 
         } catch (error) {
