@@ -593,38 +593,33 @@ p {
 
 /* FAQ Section */
 .faq-section {
-    padding: 40px 0;
-    background-color: #f8f9fa;
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    padding: 100px 0;
+    background-color: var(--background-color);
 }
 
 .faq-section .container {
-    width: 100%;
-    max-width: 1200px;
+    max-width: 800px;
     margin: 0 auto;
     padding: 0 20px;
-    display: flex;
-    justify-content: center;
 }
 
 .faq-grid {
-    max-width: 800px;
-    width: 100%;
-    background: transparent;
-    border-radius: 16px;
-    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
 }
 
 .faq-item {
     background-color: var(--white);
     border-radius: 8px;
-    margin-bottom: 15px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     overflow: hidden;
     transition: all 0.3s ease;
+}
+
+.faq-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
 }
 
 .faq-question {
@@ -634,16 +629,23 @@ p {
     justify-content: space-between;
     align-items: center;
     transition: all 0.3s ease;
+    background-color: var(--white);
+}
+
+.faq-question:hover {
+    background-color: var(--light-gray);
 }
 
 .faq-question h3 {
     margin: 0;
     font-size: 18px;
     color: var(--secondary-color);
+    font-weight: 600;
 }
 
 .faq-question i {
     transition: transform 0.3s ease;
+    color: var(--primary-color);
 }
 
 .faq-item.active .faq-question i {
@@ -653,8 +655,9 @@ p {
 .faq-answer {
     max-height: 0;
     overflow: hidden;
-    transition: max-height 0.3s ease;
+    transition: max-height 0.3s ease, padding 0.3s ease;
     padding: 0 20px;
+    background-color: var(--white);
 }
 
 .faq-item.active .faq-answer {

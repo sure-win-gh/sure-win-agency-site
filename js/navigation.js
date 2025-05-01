@@ -3,20 +3,34 @@ class Navigation {
     static init() {
         try {
             // Get the base path of the site
-            const basePath = window.location.hostname === 'localhost' ? '/' : 
+            const basePath = window.location.hostname === 'localhost' ? '/Documents/Cursor/sure-win-agency-site/' : 
                            window.location.pathname.includes('sure-win-agency-site') ? '/sure-win-agency-site/' : '/';
+
+            // Function to create URL with proper extension
+            const createUrl = (path) => {
+                // If the path is empty, return the base path
+                if (!path) return basePath;
+                
+                // Check if we're in local development
+                if (window.location.hostname === 'localhost') {
+                    return `${basePath}${path}.html`;
+                }
+                
+                // For production, use clean URLs
+                return `${basePath}${path}`;
+            };
 
             const navigationHTML = `
                 <nav class="navbar">
                     <div class="nav-container">
-                        <a href="${basePath}" class="logo">
+                        <a href="${createUrl('')}" class="logo">
                             <img src="${basePath}images/logo.png" alt="The Sure Win Agency Logo" style="height: 40px; width: auto;">
                         </a>
                         <div class="nav-links">
-                            <a href="${basePath}services">What We Do</a>
-                            <a href="${basePath}resources">Resources</a>
-                            <a href="${basePath}faq">FAQ</a>
-                            <a href="${basePath}contact" class="cta-button">Get In Touch</a>
+                            <a href="${createUrl('services')}">What We Do</a>
+                            <a href="${createUrl('resources')}">Resources</a>
+                            <a href="${createUrl('faq')}">FAQ</a>
+                            <a href="${createUrl('contact')}" class="cta-button">Get In Touch</a>
                         </div>
                         <button class="mobile-menu-btn">
                             <span></span>
