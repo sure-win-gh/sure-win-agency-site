@@ -3,9 +3,8 @@ class Navigation {
     static init() {
         try {
             // Get the base path of the site
-            const basePath = window.location.pathname.includes('sure-win-agency-site') 
-                ? '/sure-win-agency-site/' 
-                : '/';
+            const basePath = window.location.hostname === 'localhost' ? '/' : 
+                           window.location.pathname.includes('sure-win-agency-site') ? '/sure-win-agency-site/' : '/';
 
             const navigationHTML = `
                 <nav class="navbar">
@@ -31,20 +30,7 @@ class Navigation {
             // Insert navigation at the start of the body
             document.body.insertAdjacentHTML('afterbegin', navigationHTML);
 
-            // Add event listeners for navigation links
-            document.querySelectorAll('.nav-links a').forEach(link => {
-                link.addEventListener('click', (e) => {
-                    e.preventDefault();
-                    const href = link.getAttribute('href');
-                    window.location.href = href;
-                });
-            });
-
-            // Add event listener for logo
-            document.querySelector('.logo').addEventListener('click', (e) => {
-                e.preventDefault();
-                window.location.href = `${basePath}`;
-            });
+            // No need for click event listeners - let the browser handle navigation naturally
 
         } catch (error) {
             console.error('Error initializing navigation:', error);
