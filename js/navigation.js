@@ -41,10 +41,50 @@ class Navigation {
                 </nav>
             `;
 
+            const footerHTML = `
+                <footer class="footer">
+                    <div class="container">
+                        <div class="footer-grid">
+                            <div class="footer-info">
+                                <h3>The Sure Win Agency</h3>
+                                <p>We turn content into conversations.</p>
+                            </div>
+                            <div class="footer-links">
+                                <h4>Quick Links</h4>
+                                <a href="${createUrl('')}">Home</a>
+                                <a href="${createUrl('about')}">About</a>
+                                <a href="${createUrl('services')}">Services</a>
+                                <a href="${createUrl('contact')}">Contact</a>
+                            </div>
+                            <div class="footer-contact">
+                                <h4>Contact Us</h4>
+                                <p>Email: info@thesurewinagency.com</p>
+                                <p>Phone: (555) 123-4567</p>
+                            </div>
+                        </div>
+                        <div class="footer-bottom">
+                            <p>&copy; 2024 The Sure Win Agency. All rights reserved.</p>
+                        </div>
+                    </div>
+                </footer>
+            `;
+
             // Insert navigation at the start of the body
             document.body.insertAdjacentHTML('afterbegin', navigationHTML);
 
-            // No need for click event listeners - let the browser handle navigation naturally
+            // Insert footer at the end of the body
+            document.body.insertAdjacentHTML('beforeend', footerHTML);
+
+            // Mobile menu functionality
+            const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+            const navLinks = document.querySelector('.nav-links');
+
+            if (mobileMenuBtn && navLinks) {
+                mobileMenuBtn.addEventListener('click', () => {
+                    mobileMenuBtn.classList.toggle('active');
+                    navLinks.classList.toggle('active');
+                });
+            }
 
         } catch (error) {
             console.error('Error initializing navigation:', error);
