@@ -2232,17 +2232,31 @@ p {
 
 .section-header {
     text-align: center;
-    margin-bottom: 36px;
+    margin-bottom: 40px;
 }
+
 .section-header h2 {
-    font-size: 2rem;
-    color: var(--primary-color);
-    margin-bottom: 10px;
+    font-size: 2.5rem;
+    color: var(--secondary-color);
+    margin-bottom: 20px;
 }
+
 .section-header .section-intro {
-    font-size: 1.1rem;
+    max-width: 800px;
+    margin: 0 auto;
+    font-size: 1.2rem;
     color: var(--text-color);
-    margin-bottom: 0;
+    opacity: 0.9;
+}
+
+@media (max-width: 768px) {
+    .section-header h2 {
+        font-size: 2rem;
+    }
+    
+    .section-header .section-intro {
+        font-size: 1.1rem;
+    }
 }
 
 @media (max-width: 700px) {
@@ -2268,8 +2282,6 @@ p {
 }
 .dynamic-card {
     position: relative;
-    background-size: cover;
-    background-position: center;
     border-radius: 24px;
     overflow: hidden;
     box-shadow: 0 4px 24px rgba(0,0,0,0.08);
@@ -2278,11 +2290,19 @@ p {
     min-height: 180px;
     transition: transform 0.2s, box-shadow 0.2s;
 }
-.dynamic-card:hover {
-    transform: translateY(-4px) scale(1.02);
-    box-shadow: 0 8px 32px rgba(111,0,255,0.13);
+
+.dynamic-card img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
 }
+
 .card-overlay {
+    position: relative;
     background: linear-gradient(0deg, rgba(19,22,40,0.85) 0%, rgba(19,22,40,0.2) 100%);
     color: #fff;
     padding: 28px 24px 20px 24px;
@@ -2292,7 +2312,9 @@ p {
     align-items: flex-start;
     justify-content: flex-end;
     height: 100%;
+    z-index: 2;
 }
+
 .card-overlay h3 {
     font-size: 1.25rem;
     font-weight: 600;
@@ -2300,6 +2322,13 @@ p {
     color: #fff;
     text-shadow: 0 2px 8px rgba(0,0,0,0.18);
 }
+
+.card-overlay p {
+    color: #fff;
+    margin-bottom: 18px;
+    text-shadow: 0 2px 8px rgba(0,0,0,0.18);
+}
+
 .card-btn {
     background: var(--white);
     color: var(--primary-color);
@@ -2314,11 +2343,14 @@ p {
     margin-top: auto;
     cursor: pointer;
     display: inline-block;
+    z-index: 3;
 }
+
 .card-btn:hover {
     background: var(--primary-color);
     color: var(--white);
 }
+
 .card-large {
     grid-row: span 2;
 }
@@ -2782,3 +2814,56 @@ p {
         border-radius: 10px;
     }
 } 
+
+/* Done For You Page Specific Styles */
+.done-for-you .section-header {
+    text-align: center;
+    margin-bottom: 40px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.done-for-you .section-header h2 {
+    font-size: 2.5rem;
+    color: var(--secondary-color);
+    margin-bottom: 20px;
+    text-align: center;
+    width: 100%;
+}
+
+/* Specific section styles */
+.included-services .section-header,
+.how-it-works .section-header,
+.client-wins .section-header {
+    text-align: center;
+    width: 100%;
+}
+
+.included-services .section-header h2,
+.how-it-works .section-header h2,
+.client-wins .section-header h2 {
+    text-align: center;
+    width: 100%;
+    margin: 0 auto;
+}
+
+/* Container alignment */
+.included-services .container,
+.how-it-works .container,
+.client-wins .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .done-for-you .section-header h2,
+    .included-services .section-header h2,
+    .how-it-works .section-header h2,
+    .client-wins .section-header h2 {
+        font-size: 2rem;
+    }
+}
