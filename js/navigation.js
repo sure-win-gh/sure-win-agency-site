@@ -32,7 +32,7 @@ class Navigation {
                             <a href="${createUrl('faq')}">FAQ</a>
                             <a href="${createUrl('contact')}" class="cta-button">Get In Touch</a>
                         </div>
-                        <button class="mobile-menu-btn">
+                        <button class="mobile-menu-btn" aria-label="Toggle mobile menu">
                             <span></span>
                             <span></span>
                             <span></span>
@@ -58,8 +58,7 @@ class Navigation {
                             </div>
                             <div class="footer-contact">
                                 <h4>Contact Us</h4>
-                                <p>Email: info@thesurewinagency.com</p>
-                                <p>Phone: (555) 123-4567</p>
+                                <p>Email: hello@thesurewinagency.com</p>
                             </div>
                         </div>
                         <div class="footer-bottom">
@@ -80,9 +79,39 @@ class Navigation {
             const navLinks = document.querySelector('.nav-links');
 
             if (mobileMenuBtn && navLinks) {
-                mobileMenuBtn.addEventListener('click', () => {
+                // Toggle mobile menu
+                const toggleMenu = (e) => {
+                    if (e) e.stopPropagation();
                     mobileMenuBtn.classList.toggle('active');
                     navLinks.classList.toggle('active');
+                };
+
+                // Add click event listener to mobile menu button
+                mobileMenuBtn.addEventListener('click', toggleMenu);
+
+                // Close menu when clicking outside
+                document.addEventListener('click', (e) => {
+                    if (navLinks.classList.contains('active') && 
+                        !mobileMenuBtn.contains(e.target) && 
+                        !navLinks.contains(e.target)) {
+                        toggleMenu();
+                    }
+                });
+
+                // Close menu when clicking a link
+                navLinks.querySelectorAll('a').forEach(link => {
+                    link.addEventListener('click', () => {
+                        if (navLinks.classList.contains('active')) {
+                            toggleMenu();
+                        }
+                    });
+                });
+
+                // Close menu on window resize if open
+                window.addEventListener('resize', () => {
+                    if (window.innerWidth > 768 && navLinks.classList.contains('active')) {
+                        toggleMenu();
+                    }
                 });
             }
 

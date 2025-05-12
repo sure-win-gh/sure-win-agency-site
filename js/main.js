@@ -1,16 +1,5 @@
 // Mobile Menu Toggle
 document.addEventListener('DOMContentLoaded', function() {
-    // Mobile Menu Toggle
-    const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
-    const navLinks = document.querySelector('.nav-links');
-
-    if (mobileMenuBtn && navLinks) {
-        mobileMenuBtn.addEventListener('click', () => {
-            navLinks.classList.toggle('active');
-            mobileMenuBtn.classList.toggle('active');
-        });
-    }
-
     // Sticky Navigation
     const navbar = document.querySelector('.navbar');
     let lastScroll = 0;
@@ -95,9 +84,7 @@ document.addEventListener('DOMContentLoaded', function() {
             input.addEventListener('input', () => {
                 if (input.checkValidity()) {
                     input.classList.remove('invalid');
-                    input.classList.add('valid');
                 } else {
-                    input.classList.remove('valid');
                     input.classList.add('invalid');
                 }
             });
