@@ -2258,7 +2258,7 @@ p {
 
 /* Dynamic Cards Section */
 .dynamic-cards-section {
-    background: var(--background-color);
+    background: var(--white);
     padding: 60px 0 40px 0;
 }
 .dynamic-cards-grid {
@@ -2305,9 +2305,9 @@ p {
 }
 
 .card-overlay h3 {
-    font-size: 1.25rem;
+    font-size: 1.3rem;
     font-weight: 600;
-    margin-bottom: 18px;
+    margin-bottom: 14px;
     color: #fff;
     text-shadow: 0 2px 8px rgba(0,0,0,0.18);
 }

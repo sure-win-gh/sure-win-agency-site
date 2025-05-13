@@ -27,6 +27,7 @@ class Navigation {
                             <img src="${basePath}images/logo.png" alt="The Sure Win Agency Logo" style="height: 40px; width: auto;">
                         </a>
                         <div class="nav-links">
+                            <a href="${createUrl('')}">Home</a>
                             <a href="${createUrl('services')}">What We Do</a>
                             <a href="${createUrl('resources')}">Resources</a>
                             <a href="${createUrl('faq')}">FAQ</a>
