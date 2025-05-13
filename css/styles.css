@@ -292,6 +292,41 @@ p {
     text-align: center;
 }
 
+/* Marquee Section */
+.marquee-section {
+    background: var(--primary-color);
+    padding: 15px 0;
+    overflow: hidden;
+    white-space: nowrap;
+    width: 100%;
+    position: relative;
+}
+
+.marquee-content {
+    display: inline-flex;
+    white-space: nowrap;
+    will-change: transform;
+    animation: marquee 20s linear infinite;
+    position: relative;
+}
+
+.marquee-content span {
+    display: inline-block;
+    color: var(--white);
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-right: 40px;
+}
+
+@keyframes marquee {
+    0% {
+        transform: translateX(0%);
+    }
+    100% {
+        transform: translateX(-40%);
+    }
+}
+
 .hero-content {
     max-width: 800px;
     margin: 0 auto;
@@ -1470,6 +1505,8 @@ p {
     transition: all 0.3s ease;
     opacity: 0;
     visibility: hidden;
+    width: 90%;
+    max-width: 400px;
 }
 
 .floating-cta-wrapper.visible {
@@ -1524,14 +1561,25 @@ p {
     .floating-cta-wrapper {
         bottom: 10px;
         width: 90%;
+        max-width: 320px;
     }
 
     .floating-cta {
-        padding: 10px 20px;
+        padding: 12px 20px;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 10px;
     }
 
     .floating-cta .cta-button {
-        padding: 8px 16px;
+        width: 100%;
+        justify-content: center;
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+
+    .floating-cta .cta-text {
         font-size: 14px;
     }
 }
@@ -2259,7 +2307,7 @@ p {
 /* Dynamic Cards Section */
 .dynamic-cards-section {
     background: var(--white);
-    padding: 60px 0 40px 0;
+    padding: 80px 0 80px 0;
 }
 .dynamic-cards-grid {
     display: grid;
@@ -2268,6 +2316,7 @@ p {
     gap: 24px;
     max-width: 1200px;
     margin: 0 auto;
+    padding: 30px 0 30px 0;
 }
 .dynamic-card {
     position: relative;
@@ -2854,5 +2903,89 @@ p {
     .how-it-works .section-header h2,
     .client-wins .section-header h2 {
         font-size: 2rem;
+    }
+}
+
+/* My Story Section */
+.my-story-section {
+    padding: 100px 0;
+    background: var(--white);
+    position: relative;
+    overflow: hidden;
+}
+
+.story-container {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+    max-width: 1200px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
+
+.story-content {
+    flex: 1;
+    min-width: 320px;
+}
+
+.story-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 32px;
+    color: var(--secondary-color);
+}
+
+.story-text {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: var(--text-color);
+    margin-bottom: 24px;
+}
+
+.story-image {
+    flex: 1;
+    min-width: 320px;
+    position: relative;
+}
+
+.story-image img {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    border-radius: 24px;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+    background: #eee;
+}
+
+.story-highlight {
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+.story-cta {
+    margin-top: 32px;
+}
+
+@media (max-width: 1024px) {
+    .story-container {
+        flex-direction: column;
+        gap: 40px;
+    }
+    .story-image img {
+        max-width: 100%;
+        margin: 0 auto;
+        display: block;
+    }
+}
+
+@media (max-width: 700px) {
+    .my-story-section {
+        padding: 60px 0;
+    }
+    .story-title {
+        font-size: 2rem;
+    }
+    .story-text {
+        font-size: 1rem;
     }
 }

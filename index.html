@@ -43,6 +43,37 @@
         </div>
     </section>
 
+    <!-- Marquee Section -->
+    <div class="marquee-section">
+        <div class="marquee-content" id="marquee-content">
+            <span>We have 3 client spots left – Are you in? ⚡</span>
+            <span>We have 3 client spots left – Are you in? ⚡</span>
+            <span>We have 3 client spots left – Are you in? ⚡</span>
+            <span>We have 3 client spots left – Are you in? ⚡</span>
+            <span>We have 3 client spots left – Are you in? ⚡</span>
+        </div>
+    </div>
+    <script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const marquee = document.getElementById('marquee-content');
+        const marqueeSection = marquee.parentElement;
+        
+        // Ensure the animation is smooth by setting the width
+        marquee.style.width = 'auto';
+        
+        // Reset the animation if it's not running
+        function resetAnimation() {
+            marquee.style.animation = 'none';
+            requestAnimationFrame(() => {
+                marquee.style.animation = '';
+            });
+        }
+        
+        // Reset animation on window resize
+        window.addEventListener('resize', resetAnimation);
+    });
+    </script>
+
     <!-- Problem Section -->
     <section class="problem-section">
         <div class="container">
@@ -178,13 +209,38 @@
                 </div>
                 <div class="dynamic-card card-small animate-on-scroll" data-delay="0.1" style="background-image: url('images/elementor-placeholder-image.png');">
                     <div class="card-overlay">
-                        <h3>Check statuses of your payments made in a terminal</h3>
+                        <h3>DIY Solutions</h3>
+                        <p>Access our library of templates, tools, and resources to get started on your own.</p>
                         <a href="#" class="card-btn">Find Out More</a>
                     </div>
                 </div>
             </div>
             <div class="who-cta animate-on-scroll" data-delay="0.3" style="text-align: center;">
                 <a href="services.html" class="cta-button primary">View All Services</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- My Story Section -->
+    <section class="my-story-section">
+        <div class="container story-container">
+            <div class="story-content">
+                <h2 class="story-title animate-on-scroll" data-delay="0.1">My Story</h2>
+                <p class="story-text animate-on-scroll" data-delay="0.2">
+                    After 10+ years of helping businesses navigate the complex world of digital marketing, and navigating it for the past 5 years with my own businesses, I've come to realise something crucial: <span class="story-highlight">success comes from creating systems that work for your unique business.</span>
+                </p>
+                <p class="story-text animate-on-scroll" data-delay="0.3">
+                    I started <b>The Sure Win Agency</b> with one mission: <b>to help businesses like yours build clear, effective marketing solutions that drive real growth.</b> No more guesswork, no more wasted time - <span class="story-highlight">just proven strategies that get results.</span>
+                </p>
+                <p class="story-text animate-on-scroll" data-delay="0.4">
+                    Whether you're looking for resources for 'do it yourself' marketing, to collaborate with experts, or hand off the entire process for someone else to deal with, we've got you covered. Our approach is simple: <span class="story-highlight">we meet you where you are and help you get where you want to be.</span>
+                </p>
+                <div class="story-cta animate-on-scroll" data-delay="0.5">
+                    <a href="contact.html" class="cta-button primary">Let's Work Together</a>
+                </div>
+            </div>
+            <div class="story-image animate-on-scroll" data-delay="0.2">
+                <img src="images/elementor-placeholder-image.png" alt="Founder of The Sure Win Agency" />
             </div>
         </div>
     </section>
@@ -226,7 +282,7 @@
     <!-- CTA Section -->
     <section class="cta-section">
         <div class="container">
-            <h2 class="animate-on-scroll">Ready to transform your digital presence?</h2>
+            <h2 class="animate-on-scroll">You're one conversation away from changing everything</h2>
             <p class="animate-on-scroll">Book your free strategy call today and discover how we can help you grow.</p>
             <a href="contact.html" class="cta-button animate-on-scroll">
                 Schedule Your Call
